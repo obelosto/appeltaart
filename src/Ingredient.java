@@ -11,11 +11,20 @@ public class Ingredient {
     }
 
     public double getAmount() {
-        //amount = Math.round(amount);
-        /*if(amount % 1.0 == 0) {
+
+/*        if(amount % 1 == 0) {
             return (int)amount;
-        }*/
-        return amount;
+        }
+        return amount;*/
+
+
+        Double[] splitter = Double.valueOf(amount).split("\\.");
+        double i = splitter[1];
+
+        if (i > 0){
+            return amount;
+        }
+        return (int)amount;
     }
     public Unit getUnit() { return unit; }
     public String getName() {   return name;  }
