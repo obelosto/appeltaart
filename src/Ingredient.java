@@ -12,12 +12,15 @@ public class Ingredient {
 
     public double getAmount() {
         //amount = Math.round(amount);
+        if(amount % 1.0 == 0) {
+            return (int)amount;
+        }
         return amount;
     }
     public Unit getUnit() { return unit; }
     public String getName() {   return name;  }
 
-    public void setAmount(double amount) {  this.amount = amount; }
+    public void setAmount(double amount) { this.amount = amount; }
     public void setUnit(Unit unit) {  this.unit = unit; }
     public void setName(String name) { this.name = name; }
 
