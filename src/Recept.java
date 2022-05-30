@@ -31,7 +31,14 @@ public class Recept {
     public void printIngredients(){
         System.out.println(ingListTitle);
         for(Ingredient ing : contents) {
-            System.out.println( "\u25AA " + ing.getAmount() + " " + ing.getUnit() + " " + ing.getName() );
+
+            if( ing.getAmount() % 1 == 0){
+                System.out.println( "\u25AA " + (int)ing.getAmount() + " " + ing.getUnit() + " " + ing.getName() );
+            }
+            else {
+                System.out.println( "\u25AA " + ing.getAmount() + " " + ing.getUnit() + " " + ing.getName() );
+            }
+
         }
     }
 
