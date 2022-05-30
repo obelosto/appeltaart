@@ -12,9 +12,9 @@ public class Ingredient {
 
     public double getAmount() {
         //amount = Math.round(amount);
-        if(amount % 1.0 == 0) {
+        /*if(amount % 1.0 == 0) {
             return (int)amount;
-        }
+        }*/
         return amount;
     }
     public Unit getUnit() { return unit; }
